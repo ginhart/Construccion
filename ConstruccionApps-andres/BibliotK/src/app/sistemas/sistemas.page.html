@@ -1,0 +1,25 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-item>
+      <ion-title padding center text-center>Libros Sistemas </ion-title>
+    <ion-button class = "search" href= "search">
+        <ion-icon name="search-outline"></ion-icon>
+    </ion-button>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="principal"></ion-back-button>
+      </ion-buttons>
+    </ion-item>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <ion-item button="true" (click)="presentAlertSistemas()">
+        <ion-img class ="img-libro" src="https://images-na.ssl-images-amazon.com/images/I/7139EcoIUpL.jpg"></ion-img>
+      <ion-label>
+        <p style="text-align: center;">El Gran libro de Android <br>Avanzado</p>
+      </ion-label>
+      </ion-item>
+    </ion-list>
+</ion-content>

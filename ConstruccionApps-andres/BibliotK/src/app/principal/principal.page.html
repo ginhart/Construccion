@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Principal Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--Etiqueta que permite la visibilidad del menu lateral-->
+  <ion-router-outlet id="main"></ion-router-outlet>
+  <!--Menu lateral-->
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Start Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Página Principal</ion-item>
+        <ion-item button="true" (click)="presentAlertDeseados()">Deseados</ion-item>
+        <ion-item href="historial">Historial</ion-item>
+        <ion-item button="true" (click)="presentAlertFavoritos()">Libros Favoritos</ion-item>
+        <ion-item href="configuracion">Configuracion</ion-item>
+        <ion-item href="home">Salir</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card button="true" (click)="cardPsicologia()">
+          <ion-card-content>
+            <ion-avatar>
+              <img src="../../assets/principal/psicologia.jpg" />
+            </ion-avatar>
+            <ion-label>Psicologia</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card href="sistemas" button="true" >
+          <ion-card-content>
+            <ion-avatar>
+              <img src="../../assets/principal/ing_sistemas.png" />
+            </ion-avatar>
+            <ion-label>Sistemas</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card button="true" (click)="cardIndustrial()">
+          <ion-card-content>
+            <ion-avatar>
+              <img src="../../assets/principal/ing_industrial.jpg" />
+            </ion-avatar>
+            <ion-label>Industrial</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card button="true" (click)="cardMatematicas()">
+          <ion-card-content>
+            <ion-avatar>
+              <img src="../../assets/principal/matematicas.png" />
+            </ion-avatar>
+            <ion-label>Matematicas</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card button="true" (click)="cardMercadeo()">
+          <ion-card-content>
+            <ion-avatar>
+              <img src="../../assets/principal/mercadeo.png" />
+            </ion-avatar>
+            <ion-label>Mercadeo</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card button="true" (click)="cardNegocios()">
+          <ion-card-content>
+            <ion-avatar>
+              <img src="../../assets/principal/negocios.png" />
+            </ion-avatar>
+            <ion-label>Negocios</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

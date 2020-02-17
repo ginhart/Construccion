@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" padding center text-center>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-img  src = "https://www.uninorte.edu.co/documents/10162/4921b1a3-3342-4fda-aa6a-d2e03bcb0546?igSmallImage=0">
+
+  </ion-img>
+
+  <ion-title style="margin-top: 10vh;">Bienvenidos a la Bibliote-K</ion-title>
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="Código"> </ion-input>
+    </ion-item>
+    <ion-item style="margin-bottom: 5vh;">
+      <ion-input placeholder="Contraseña" type="password" > </ion-input>
+    </ion-item >
+  </ion-list>
+
+  <ion-button style="margin-left: 120px;" color="primary" (click)="onLogin()" href="principal" >Entrar</ion-button>  
+
+</ion-content>

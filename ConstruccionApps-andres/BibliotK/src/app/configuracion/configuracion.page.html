@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Configuracion</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="principal"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!--imagen y nombre representativos del usuario-->
+    <ion-item>
+      <ion-avatar>
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+      <!--'nombre' es una variable que viene del .ts-->
+      <ion-label style="margin-left: 10px;">{{nombre}}</ion-label>
+    </ion-item>
+    <!--opciones del usuario-->
+    <ion-item-divider>Perfil</ion-item-divider>
+    <ion-item button (click)="cambiarNombre()">
+      <ion-label>Nombre de usuario</ion-label>
+    </ion-item>
+    <ion-item button (click)="cambiarPassword()">
+      <ion-label>Contraseña</ion-label>
+    </ion-item>
+    <!--opciones de la aplicacion-->
+    <ion-item-divider>Aplicacion</ion-item-divider>
+    <ion-item button (click)="cambiarIdioma()" detail>
+      <ion-label>Idioma</ion-label>
+      <ion-label>{{idioma}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Notificaciones</ion-label>
+      <ion-toggle checked></ion-toggle>
+    </ion-item>
+    <ion-item button (click)="presentActionSheet()" detail>
+      <ion-label>Tamaño fuente</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

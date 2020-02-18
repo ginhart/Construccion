@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { LibroPage } from '../libro/libro.page';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class SistemasPage implements OnInit {
   ngOnInit() {
   }
 
-  async presentAlertSistemas() {
+  /*async presentAlertSistemas() {
     const alert = await this.alertController.create({
       header: 'El Gran Libro de Android Avanzado',
       subHeader: 'Marcombo S.A',
@@ -23,6 +24,6 @@ export class SistemasPage implements OnInit {
     });
 
     await alert.present();
-  }
+  }*/
 
 }
